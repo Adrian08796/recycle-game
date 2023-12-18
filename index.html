@@ -5,13 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./script.js">
-  <title>Random Trash Photo Container</title>
+  <title>Recycling Bins</title>
 </head>
 <body>
-  <div class="image-container">
+  <div class="drop-containers">
+    <div class="drop-container" id="paper-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+      Paper
+    </div>
+    <div class="drop-container" id="plastic-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+      Plastic
+    </div>
+    <div class="drop-container" id="bottles-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+      Bottles
+    </div>
+    <div class="drop-container" id="glass-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+      Glass
+    </div>
+    <div class="drop-container" id="common-trash-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+      Common Trash
+    </div>
+    <div class="drop-container" id="metal-container" ondrop="drop(event)" ondragover="allowDrop(event)">
+      Metal
+    </div>
+  </div>
+  
+  <div id="image-container" class="image-container" draggable="true" ondragstart="drag(event)">
     <img id="random-photo" src="" alt="Random Trash Photo">
     <button onclick="loadRandomTrashPhoto()">Load Random Trash Photo</button>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
